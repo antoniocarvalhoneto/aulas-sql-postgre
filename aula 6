@@ -1,0 +1,22 @@
+erro na query
+
+Onde está o erro?
+
+SELECT "Customerld", SUM("Total") AS "GastoTotal"
+FROM "Invoice"
+WHERE SUM("Total") > 50
+GROUP BY "Customerld";
+
+O erro está no WHERE SUM
+a ordem de execução lógica do SQL é
+FROM → WHERE → GROUP BY → HAVING → SELECT
+então, o where nesse caso não é a opção, o certo seria
+
+SELECT "Customerld", SUM("Total") AS "GastoTotal"
+FROM "Invoice"
+GROUP BY "Customerld"
+HAVING SUM("Total") > 50;
+
+
+
+

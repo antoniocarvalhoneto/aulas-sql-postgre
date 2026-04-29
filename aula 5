@@ -1,0 +1,54 @@
+
+-- SELECT
+--     "FirstName" AS nome,
+--     "LastName" AS sobrenome,
+--     "Country" AS pais
+-- FROM "Customer"
+-- WHERE "Country" IN ('Brazil', 'Canada', 'France')
+-- ORDER BY "LastName" ASC;
+
+
+-- SELECT
+--     "Name" AS nome_faixa,
+--     "Milliseconds" AS duracao_milisegundos,
+--     ROUND(("Milliseconds" / 60000.0), 2) AS duracao_minutos
+-- FROM "Track"
+-- WHERE "Milliseconds" BETWEEN 240000 AND 360000
+-- ORDER BY "Milliseconds" DESC;
+
+
+
+-- SELECT
+--     "Name" AS nome_faixa,
+--     "Composer" AS compositor
+-- FROM "Track"
+-- WHERE "Composer" IS NULL
+-- ORDER BY "Name" ASC;
+
+
+-- SELECT
+--     COUNT(*) AS quantidade_faixas_sem_compositor
+-- FROM "Track"
+-- WHERE "Composer" IS NULL;
+
+
+
+-- SELECT
+--     "InvoiceId",
+--     "CustomerId",
+--     "InvoiceDate",
+--     "BillingCountry",
+--     "Total"
+-- FROM "Invoice"
+-- WHERE "InvoiceDate" BETWEEN '2013-01-01' AND '2013-12-31'
+--   AND "Total" > 5.00
+-- ORDER BY "InvoiceDate" ASC;
+
+
+-- SELECT
+--     "TrackId",
+--     "Name" AS nome_faixa,
+--     "Milliseconds" AS duracao_milisegundos
+-- FROM "Track"
+-- ORDER BY "TrackId" ASC
+-- LIMIT 10 OFFSET 20;

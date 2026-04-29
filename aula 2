@@ -1,0 +1,42 @@
+
+
+Atividade 2 - Criação de Tabelas
+--create table artistas_caju (
+--   id serial primary key,
+--   nome varchar(100) not null unique,
+--   pais varchar(100),
+--   data_cadastro timestamp default current_timestamp
+-- )
+-- create table albuns_caju (
+--   id serial primary key,
+--   titulo varchar(100) not null,
+--   ano int not null,
+--   preco numeric(10,2) check (preco >= 0),
+--   artista_id integer references artistas_caju(id) not null,
+
+--   constraint chk_ano check (ano > 1850),
+--   constraint chk_preco check (preco is null or preco > 0)
+-- )
+-- create table faixas_caju (
+--   id serial primary key,
+--   nome varchar(150) not null,
+--   duracao_segundos int not null,
+--   album_id integer references albuns_caju(id) not null,
+
+--   constraint chk_duracao check (duracao_segundos > 0)
+-- )
+
+
+Desafio
+-- alter table artistas_caju
+-- rename column id to id_artistas
+-- alter table albuns_caju
+-- rename column id to id_albuns
+-- alter table faixas_caju
+-- rename column id to id_faixas
+-- alter table faixas_caju
+-- add column genero_musical varchar(50)
+-- alter table faixas_caju
+-- add constraint chk_genero check(
+--   genero_musical in ('Rock', 'Pop', 'Jazz', 'Hip-Hop', 'Eletronica')insert
+-- );

@@ -1,0 +1,33 @@
+-- begin;
+
+-- update faixas_caju
+-- set album_id = 2
+-- where album_id = 1;
+
+-- commit;
+
+
+-- begin;
+
+-- insert into artistas_caju (id_artistas, nome, pais)
+-- values(10, 'Artista OK', 'Brasil');
+
+-- insert into albuns_caju (id_album, titulo, ano, artista_id)
+-- values (99, 'Album Erro', 2023, 999);
+-- commit;
+
+
+-- rollback;
+
+
+-- aba 1
+-- BEGIN;
+
+-- UPDATE artistas_caju
+-- SET nome = 'Travado'
+-- WHERE id_artistas = 1;
+
+-- aba 2
+-- UPDATE artistas_caju
+-- SET nome = 'Outro Nome'
+-- WHERE id_artistas = 1;
