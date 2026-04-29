@@ -1,0 +1,52 @@
+-- -- seleciona todas as colunas da tabela customer
+-- -- o asterisco (*) seleciona todos os elementos da tabela
+
+-- --select first_name, last_name, address, city from customer limit 10;
+
+
+-- --esse codigo eu dou select para selecionar todas as colunas (*) da tabela album 
+-- --select first_name, last_name, email, phone, city from customer
+-- create table artistas_caju (
+--   id serial primary key,
+--   nome varchar(100) not null unique,
+--   pais varchar(100),
+--   data_cadastro timestamp default current_timestamp
+-- )
+-- create table albuns_caju (
+--   id serial primary key,
+--   titulo varchar(100) not null,
+--   ano int not null,
+--   preco numeric(10,2) check (preco >= 0),
+--   artista_id integer references artistas_caju(id) not null,
+
+--   constraint chk_ano check (ano > 1850),
+--   constraint chk_preco check (preco is null or preco > 0)
+-- )
+-- create table faixas_caju (
+--   id serial primary key,
+--   nome varchar(150) not null,
+--   duracao_segundos int not null,
+--   album_id integer references albuns_caju(id) not null,
+
+--   constraint chk_duracao check (duracao_segundos > 0)
+-- )
+-- alter table artistas_caju
+-- rename column id to id_artistas
+-- alter table albuns_caju
+-- rename column id to id_albuns
+-- alter table faixas_caju
+-- rename column id to id_faixas
+-- alter table faixas_caju
+-- add column genero_musical varchar(50)
+-- alter table faixas_caju
+-- add constraint chk_genero check(
+--   genero_musical in ('Rock', 'Pop', 'Jazz', 'Hip-Hop', 'Eletronica')insert
+-- );
+-- insert into artistas_caju (nome, pais)
+-- values ('Artista Teste', 'Brasil');
+-- insert into artistas_caju (id_artistas, nome, pais)
+-- values (1, 'joao', 'Brasil')
+-- insert into albuns_caju (titulo, ano, artista_id)
+-- values ('Album Teste', 2020, 1)
+--  into artistas_caju (id_artistas, nome, pais)
+-- values (2, 'Djavan', 'Brasil'), (3, 'Vanessa da Mata', 'Brasil'), (4, 'Justin Bieber', 'Canada'), (5, 'Drake', 'Canada'),(6, 'Matuê', 'Brasil')
